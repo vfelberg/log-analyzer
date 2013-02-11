@@ -1,4 +1,4 @@
-package de.vf.loganalyzer.grep;
+package loganalyzer.grep;
 
 import java.util.ArrayList;
 import java.util.Iterator;

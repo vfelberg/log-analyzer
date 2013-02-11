@@ -1,10 +1,10 @@
-package de.vf.loganalyzer.config;
+package loganalyzer.config;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import de.vf.loganalyzer.ssh.SshClient;
+import loganalyzer.ssh.SshClient;
 
 import org.springframework.beans.factory.annotation.Required;
 

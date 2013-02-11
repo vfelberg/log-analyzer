@@ -1,4 +1,4 @@
-package de.vf.loganalyzer.zookeeper;
+package loganalyzer.zookeeper;
 
 //import de.vf.zookeeper.ZooKeeperPath;
 

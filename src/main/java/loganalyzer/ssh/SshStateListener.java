@@ -1,4 +1,4 @@
-package de.vf.loganalyzer.ssh;
+package loganalyzer.ssh;
 
 public interface SshStateListener {
     public void onInputEnabled(String host);

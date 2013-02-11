@@ -1,4 +1,4 @@
-package de.vf.loganalyzer.ssh;
+package loganalyzer.ssh;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-import de.vf.loganalyzer.config.ApplicationConfig;
-import de.vf.loganalyzer.config.HostGroupConfig;
+import loganalyzer.config.ApplicationConfig;
+import loganalyzer.config.HostGroupConfig;
 import org.apache.commons.lang.exception.ExceptionUtils;
 import org.springframework.util.Assert;
 
@@ -19,8 +19,8 @@ import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
-import de.vf.loganalyzer.OutputListener;
-import de.vf.loganalyzer.config.HostConfig;
+import loganalyzer.OutputListener;
+import loganalyzer.config.HostConfig;
 
 public final class SshClient {
     private final ApplicationConfig _applicationConfig;

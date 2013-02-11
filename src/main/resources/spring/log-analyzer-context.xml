@@ -5,7 +5,7 @@
 
     <import resource="classpath:spring/environment/mi.xml" />
 
-    <bean id="appConfig" class="de.vf.loganalyzer.config.ApplicationConfig">
+    <bean id="appConfig" class="loganalyzer.config.ApplicationConfig">
         <property name="environment" ref="mi" />
     </bean>
 </beans>

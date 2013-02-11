@@ -1,4 +1,4 @@
-package de.vf.loganalyzer.grep;
+package loganalyzer.grep;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -17,14 +17,14 @@ import javax.swing.table.TableColumnModel;
 
 import org.apache.commons.lang.StringUtils;
 
-import de.vf.loganalyzer.OutputListener;
-import de.vf.loganalyzer.config.ApplicationConfig;
-import de.vf.loganalyzer.config.HostGroupConfig;
-import static de.vf.loganalyzer.grep.GrepOutputTableModel.FILE_NAME_COLUMN;
-import static de.vf.loganalyzer.grep.GrepOutputTableModel.LINE_NUMBER_COLUMN;
-import static de.vf.loganalyzer.grep.GrepOutputTableModel.MESSAGE_COLUMN;
-import static de.vf.loganalyzer.grep.LineContextDialog.LINES_AFTER_CONTEXT;
-import static de.vf.loganalyzer.grep.LineContextDialog.LINES_BEFORE_CONTEXT;
+import loganalyzer.OutputListener;
+import loganalyzer.config.ApplicationConfig;
+import loganalyzer.config.HostGroupConfig;
+import static loganalyzer.grep.GrepOutputTableModel.FILE_NAME_COLUMN;
+import static loganalyzer.grep.GrepOutputTableModel.LINE_NUMBER_COLUMN;
+import static loganalyzer.grep.GrepOutputTableModel.MESSAGE_COLUMN;
+import static loganalyzer.grep.LineContextDialog.LINES_AFTER_CONTEXT;
+import static loganalyzer.grep.LineContextDialog.LINES_BEFORE_CONTEXT;
 
 public final class GrepOutputPanel extends JPanel implements OutputListener {
     private final ApplicationConfig _applicationConfig;

@@ -1,4 +1,4 @@
-package de.vf.loganalyzer;
+package loganalyzer;
 
 import java.awt.BorderLayout;
 import java.awt.GridBagConstraints;
@@ -24,9 +24,9 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import de.vf.loganalyzer.config.ApplicationConfig;
-import de.vf.loganalyzer.config.Environment;
-import de.vf.loganalyzer.config.HostGroupConfig;
+import loganalyzer.config.ApplicationConfig;
+import loganalyzer.config.Environment;
+import loganalyzer.config.HostGroupConfig;
 
 public class LogAnalyzer extends JPanel {
 

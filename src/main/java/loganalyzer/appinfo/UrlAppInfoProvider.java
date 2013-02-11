@@ -1,4 +1,4 @@
-package de.vf.loganalyzer.appinfo;
+package loganalyzer.appinfo;
 
 import java.io.InputStream;
 

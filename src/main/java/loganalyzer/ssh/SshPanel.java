@@ -1,4 +1,4 @@
-package de.vf.loganalyzer.ssh;
+package loganalyzer.ssh;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -19,12 +19,12 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.SwingUtilities;
 
-import de.vf.loganalyzer.config.HostGroupConfig;
+import loganalyzer.config.HostGroupConfig;
 import org.apache.commons.lang.StringUtils;
 
-import de.vf.loganalyzer.OutputListener;
-import de.vf.loganalyzer.appinfo.AppInfoProvider;
-import de.vf.loganalyzer.config.HostConfig;
+import loganalyzer.OutputListener;
+import loganalyzer.appinfo.AppInfoProvider;
+import loganalyzer.config.HostConfig;
 
 public final class SshPanel extends JPanel implements ActionListener, OutputListener {
     private static final String DEFAULT_SEARCH_PATTERN =

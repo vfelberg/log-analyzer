@@ -1,4 +1,4 @@
-package de.vf.loganalyzer.grep;
+package loganalyzer.grep;
 
 import java.awt.Color;
 import java.awt.GridBagConstraints;
@@ -25,9 +25,9 @@ import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultHighlighter;
 import javax.swing.text.Highlighter;
 
-import de.vf.loganalyzer.OutputListener;
-import de.vf.loganalyzer.config.HostGroupConfig;
-import de.vf.loganalyzer.ssh.SshClient;
+import loganalyzer.OutputListener;
+import loganalyzer.config.HostGroupConfig;
+import loganalyzer.ssh.SshClient;
 
 public class LineContextDialog extends JDialog implements OutputListener {
 

@@ -1,4 +1,4 @@
-package de.vf.loganalyzer;
+package loganalyzer;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -17,13 +17,13 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.ImageIcon;
 
-import de.vf.loganalyzer.config.ApplicationConfig;
-import de.vf.loganalyzer.config.HostConfig;
-import de.vf.loganalyzer.config.HostGroupConfig;
-import de.vf.loganalyzer.grep.GrepOutputPanel;
-import de.vf.loganalyzer.ssh.SshClient;
-import de.vf.loganalyzer.ssh.SshPanel;
-import de.vf.loganalyzer.ssh.SshStateListener;
+import loganalyzer.config.ApplicationConfig;
+import loganalyzer.config.HostConfig;
+import loganalyzer.config.HostGroupConfig;
+import loganalyzer.grep.GrepOutputPanel;
+import loganalyzer.ssh.SshClient;
+import loganalyzer.ssh.SshPanel;
+import loganalyzer.ssh.SshStateListener;
 
 public final class HostGroup extends JPanel implements SshStateListener {
     private final ApplicationConfig _applicationConfig;

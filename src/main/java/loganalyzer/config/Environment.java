@@ -1,4 +1,4 @@
-package de.vf.loganalyzer.config;
+package loganalyzer.config;
 
 import java.util.List;
 

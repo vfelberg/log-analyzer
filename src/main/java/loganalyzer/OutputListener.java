@@ -1,4 +1,4 @@
-package de.vf.loganalyzer;
+package loganalyzer;
 
 public interface OutputListener {
     public void onOutput(String output);

@@ -1,4 +1,4 @@
-package de.vf.loganalyzer.appinfo;
+package loganalyzer.appinfo;
 
 public interface AppInfoProvider {
     public String getContentType();

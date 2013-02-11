@@ -1,6 +1,6 @@
-package de.vf.loganalyzer.config;
+package loganalyzer.config;
 
-import de.vf.loganalyzer.appinfo.AppInfoProvider;
+import loganalyzer.appinfo.AppInfoProvider;
 
 import org.springframework.beans.factory.annotation.Required;
 

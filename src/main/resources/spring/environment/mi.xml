@@ -3,11 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="mi" class="de.vf.loganalyzer.config.Environment" lazy-init="true">
+    <bean id="mi" class="loganalyzer.config.Environment" lazy-init="true">
         <property name="environmentName" value="MI" />
         <property name="hostGroupConfigs">
             <list>
-                <bean class="de.vf.loganalyzer.config.HostGroupConfig">
+                <bean class="loganalyzer.config.HostGroupConfig">
                     <property name="groupName" value="Config Scanner" />
                     <property name="hostConfigs">
                         <list>
@@ -18,7 +18,7 @@
                               value="/data/content_import/logs/pyimport/config_scanner" />
                     <property name="baseLogFileName" value="scanner.log" />
                 </bean>
-                <bean class="de.vf.loganalyzer.config.HostGroupConfig">
+                <bean class="loganalyzer.config.HostGroupConfig">
                     <property name="groupName" value="Converter" />
                     <property name="hostConfigs">
                         <list>
@@ -29,7 +29,7 @@
                               value="/data/content_import/logs/pyimport/converter" />
                     <property name="baseLogFileName" value="converter.log" />
                 </bean>
-                <bean class="de.vf.loganalyzer.config.HostGroupConfig">
+                <bean class="loganalyzer.config.HostGroupConfig">
                     <property name="groupName" value="Warner" />
                     <property name="hostConfigs">
                         <list>
@@ -40,7 +40,7 @@
                               value="/data/content_import/logs/pyimport/config_scanner" />
                     <property name="baseLogFileName" value="warner.log" />
                 </bean>
-                <bean class="de.vf.loganalyzer.config.HostGroupConfig">
+                <bean class="loganalyzer.config.HostGroupConfig">
                     <property name="groupName" value="Finetunes" />
                     <property name="hostConfigs">
                         <list>
@@ -55,7 +55,7 @@
         </property>
     </bean>
 
-    <bean id="mi_de15" class="de.vf.loganalyzer.config.HostConfig" lazy-init="true">
+    <bean id="mi_de15" class="loganalyzer.config.HostConfig" lazy-init="true">
         <property name="hostName" value="de15" />
     </bean>
 </beans>
