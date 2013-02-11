@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="production" class="com.smeet.loganalyzer.config.Environment">
+        <property name="environmentName" value="Production" />
+        <property name="hostGroupConfigs">
+            <list>
+                <bean class="com.smeet.loganalyzer.config.HostGroupConfig">
+                    <property name="groupName" value="Web" />
+                    <property name="hostConfigs">
+                        <list>
+                            <ref bean="blnrzh016" />
+                            <ref bean="blnrzh017" />
+                        </list>
+                    </property>
+                    <property name="baseLogFileName" value="smeet-web.log" />
+                </bean>
+                <bean class="com.smeet.loganalyzer.config.HostGroupConfig">
+                    <property name="groupName" value="Services" />
+                    <property name="hostConfigs">
+                        <list>
+                            <ref bean="blnrzh022" />
+                            <ref bean="blnrzh023" />
+                            <ref bean="blnrzh034" />
+                            <ref bean="blnrzh035" />
+                            <ref bean="blnrzh036" />
+                        </list>
+                    </property>
+                    <property name="baseLogFileName" value="smeet-services.log" />
+                </bean>
+                <bean class="com.smeet.loganalyzer.config.HostGroupConfig">
+                    <property name="groupName" value="Room Services" />
+                    <property name="hostConfigs">
+                        <list>
+                            <ref bean="blnrzh025" />
+                            <ref bean="blnrzh026" />
+                            <ref bean="blnrzh027" />
+                            <ref bean="blnrzh028" />
+                            <ref bean="blnrzh029" />
+                            <ref bean="blnrzh030" />
+                        </list>
+                    </property>
+                    <property name="baseLogFileName" value="smeet-services.log" />
+                </bean>
+                <bean class="com.smeet.loganalyzer.config.HostGroupConfig">
+                    <property name="groupName" value="Video Screen" />
+                    <property name="hostConfigs">
+                        <list>
+                            <ref bean="blnrzh025" />
+                            <ref bean="blnrzh026" />
+                            <ref bean="blnrzh027" />
+                            <ref bean="blnrzh028" />
+                            <ref bean="blnrzh029" />
+                            <ref bean="blnrzh030" />
+                        </list>
+                    </property>
+                    <property name="baseLogFileName" value="smeet-services-videoroom.log" />
+                </bean>
+                <bean class="com.smeet.loganalyzer.config.HostGroupConfig">
+                    <property name="groupName" value="User Messaging" />
+                    <property name="hostConfigs">
+                        <list>
+                            <ref bean="blnrzh022" />
+                            <ref bean="blnrzh023" />
+                            <ref bean="blnrzh034" />
+                            <ref bean="blnrzh035" />
+                            <ref bean="blnrzh036" />
+                        </list>
+                    </property>
+                    <property name="baseLogFileName" value="smeet-rtmp.log" />
+                </bean>
+                <bean class="com.smeet.loganalyzer.config.HostGroupConfig">
+                    <property name="groupName" value="OnlineState" />
+                    <property name="hostConfigs">
+                        <list>
+                            <ref bean="blnrzh022" />
+                            <ref bean="blnrzh023" />
+                            <ref bean="blnrzh025" />
+                            <ref bean="blnrzh026" />
+                            <ref bean="blnrzh027" />
+                            <ref bean="blnrzh028" />
+                            <ref bean="blnrzh029" />
+                            <ref bean="blnrzh030" />
+                            <ref bean="blnrzh034" />
+                            <ref bean="blnrzh035" />
+                            <ref bean="blnrzh036" />
+                        </list>
+                    </property>
+                    <property name="baseLogFileName" value="smeet-services-onlinestate.log" />
+                </bean>
+                <bean class="com.smeet.loganalyzer.config.HostGroupConfig">
+                    <property name="groupName" value="Jobs" />
+                    <property name="hostConfigs">
+                        <list>
+                            <ref bean="blnrzh006" />
+                        </list>
+                    </property>
+                    <property name="baseLogFileName" value="smeet-jobs.log" />
+                </bean>
+            </list>
+        </property>
+        <property name="zooKeeper">
+            <bean class="com.smeet.zookeeper.ZooKeeper" destroy-method="destroy">
+                <property name="connectString" value="blnrzh014.local.net:2181,blnrzh016.local.net:2181,blnrzh017.local.net:2181,blnrzh031.local.net:2181,blnrzh032.local.net:2181" />
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="staging" class="com.smeet.loganalyzer.config.Environment">
+        <property name="environmentName" value="Staging" />
+        <property name="hostGroupConfigs">
+            <list>
+                <bean class="com.smeet.loganalyzer.config.HostGroupConfig">
+                    <property name="groupName" value="Web" />
+                    <property name="hostConfigs">
+                        <list>
+                            <ref bean="s_webapp_1" />
+                            <ref bean="s_webapp_2" />
+                        </list>
+                    </property>
+                    <property name="baseLogFileName" value="smeet-web.log" />
+                </bean>
+                <bean class="com.smeet.loganalyzer.config.HostGroupConfig">
+                    <property name="groupName" value="Services" />
+                    <property name="hostConfigs">
+                        <list>
+                            <ref bean="s_generic_1" />
+                            <ref bean="s_generic_2" />
+                        </list>
+                    </property>
+                    <property name="baseLogFileName" value="smeet-services.log" />
+                </bean>
+                <bean class="com.smeet.loganalyzer.config.HostGroupConfig">
+                    <property name="groupName" value="Jobs" />
+                    <property name="hostConfigs">
+                        <list>
+                            <ref bean="s_generic_3" />
+                        </list>
+                    </property>
+                    <property name="baseLogFileName" value="smeet-jobs.log" />
+                </bean>
+            </list>
+        </property>
+        <property name="zooKeeper">
+            <bean class="com.smeet.zookeeper.ZooKeeper" destroy-method="destroy">
+                <property name="connectString" value="s-webapp-2.local.net:2181" />
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="appConfig" class="com.smeet.loganalyzer.config.ApplicationConfig">
+        <property name="environment" ref="production" />
+    </bean>
+</beans>

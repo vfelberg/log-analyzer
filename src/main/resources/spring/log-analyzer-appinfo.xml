@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="jobsConnection" class="org.springframework.jmx.support.MBeanServerConnectionFactoryBean" lazy-init="true">
+        <property name="serviceUrl" value="service:jmx:rmi:///jndi/rmi://blnrzh006.local.net:54320/jmxrmi" />
+    </bean>
+
+    <bean id="jobsAppInfoProvider" class="de.vf.loganalyzer.appinfo.JmxAppInfoProvider" lazy-init="true">
+        <property name="connection" ref="jobsConnection" />
+        <property name="domain" value="com.smeet.jobs.management" />
+    </bean>
+
+</beans>

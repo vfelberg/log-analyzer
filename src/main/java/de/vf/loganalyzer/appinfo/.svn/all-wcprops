@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/svnrepo/!svn/ver/63610/smeet/trunk/log-analyzer/src/com/smeet/loganalyzer/appinfo
+END
+AppInfoProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/svnrepo/!svn/ver/63579/smeet/trunk/log-analyzer/src/com/smeet/loganalyzer/appinfo/AppInfoProvider.java
+END
+JmxAppInfoProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/svnrepo/!svn/ver/63580/smeet/trunk/log-analyzer/src/com/smeet/loganalyzer/appinfo/JmxAppInfoProvider.java
+END
+UrlAppInfoProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/svnrepo/!svn/ver/63610/smeet/trunk/log-analyzer/src/com/smeet/loganalyzer/appinfo/UrlAppInfoProvider.java
+END
