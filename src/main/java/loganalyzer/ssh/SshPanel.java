@@ -207,7 +207,7 @@ public final class SshPanel extends JPanel implements ActionListener, OutputList
         if (StringUtils.isBlank(fileNamePattern)) {
             fileNamePattern = DEFAULT_FILE_NAME_PATTERN;
         }
-        String text = format("grep -H -n \"%s\" %s | sed \"s/^/GREP_OUTPUT:%s:/g\"; echo OUTPUT_END\n", searchPattern, fileNamePattern, hostConfig.getHostName());
+        String text = format("grep -EHin \"%s\" %s | sed \"s/^/GREP_OUTPUT:%s:/g\"; echo OUTPUT_END\n", searchPattern, fileNamePattern, hostConfig.getHostName());
         _sshClient.sendText(text);
     }
 
