@@ -9,12 +9,15 @@ import loganalyzer.ssh.SshClient;
 import org.springframework.beans.factory.annotation.Required;
 
 public final class HostGroupConfig {
+    private static final String DEFAULT_SEARCH_PATTERN = "exception|error|warn|fatal";
+
     private String _groupName;
 
     private List<HostConfig> _hostConfigs;
 
     private String _logDirectory;
     private String _baseLogFileName;
+    private String _defaultSearchPattern = DEFAULT_SEARCH_PATTERN;
 
     private final Map<String, SshClient> _sshClients = new HashMap<String, SshClient>();
 
@@ -51,6 +54,14 @@ public final class HostGroupConfig {
     @Required
     public void setBaseLogFileName(String baseLogFileName) {
         _baseLogFileName = baseLogFileName;
+    }
+
+    public String getDefaultSearchPattern() {
+        return _defaultSearchPattern;
+    }
+
+    public void setDefaultSearchPattern(final String defaultSearchPattern) {
+        _defaultSearchPattern = defaultSearchPattern;
     }
 
     public void addSshClient(SshClient sshClient) {

@@ -1,14 +1,6 @@
 package loganalyzer.ssh;
 
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import static java.lang.String.format;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -18,27 +10,22 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.SwingUtilities;
-
-import loganalyzer.config.HostGroupConfig;
-import org.apache.commons.lang.StringUtils;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import loganalyzer.OutputListener;
 import loganalyzer.appinfo.AppInfoProvider;
 import loganalyzer.config.HostConfig;
+import loganalyzer.config.HostGroupConfig;
+import org.apache.commons.lang.StringUtils;
 
 public final class SshPanel extends JPanel implements ActionListener, OutputListener {
-    private static final String DEFAULT_SEARCH_PATTERN =
-            "Access attempt to an invalid video" +
-            "\\|BillingAccountNotFoundException" +
-            "\\|ConcurrentModificationException" +
-            "\\|IllegalArgumentException" +
-            "\\|IllegalStateException" +
-            "\\|No Hibernate Session" +
-            "\\|NonUniqueObjectException" +
-            "\\|NullPointerException" +
-            "\\|UnsupportedOperationException" +
-            "\\|UserNotVerifiedException" +
-            "\\|WarningException: Counter";
 
     private static final int MAX_OUTPUT_LINES = 100;
 
@@ -202,7 +189,7 @@ public final class SshPanel extends JPanel implements ActionListener, OutputList
         }
 
         if (StringUtils.isBlank(searchPattern)) {
-            searchPattern = DEFAULT_SEARCH_PATTERN;
+            searchPattern = _groupConfig.getDefaultSearchPattern();
         }
         if (StringUtils.isBlank(fileNamePattern)) {
             fileNamePattern = DEFAULT_FILE_NAME_PATTERN;

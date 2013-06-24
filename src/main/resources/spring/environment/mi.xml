@@ -51,11 +51,35 @@
                               value="/data/content_import/logs/pyimport/config_scanner" />
                     <property name="baseLogFileName" value="finetunes.log" />
                 </bean>
+                <bean class="loganalyzer.config.HostGroupConfig">
+                    <property name="groupName" value="ObjectSync" />
+                    <property name="hostConfigs">
+                        <list>
+                            <ref bean="mi_de51" />
+                            <ref bean="mi_de54" />
+                        </list>
+                    </property>
+                    <property name="logDirectory"
+                              value="/data/logs/object_sync" />
+                    <property name="baseLogFileName" value="*.log" />
+                </bean>
             </list>
         </property>
     </bean>
 
     <bean id="mi_de15" class="loganalyzer.config.HostConfig" lazy-init="true">
         <property name="hostName" value="de15" />
+    </bean>
+
+    <bean id="mi_de51" class="loganalyzer.config.HostConfig" lazy-init="true">
+        <property name="hostName" value="de51" />
+    </bean>
+
+    <bean id="mi_de53" class="loganalyzer.config.HostConfig" lazy-init="true">
+        <property name="hostName" value="de53" />
+    </bean>
+
+    <bean id="mi_de54" class="loganalyzer.config.HostConfig" lazy-init="true">
+        <property name="hostName" value="de54" />
     </bean>
 </beans>
